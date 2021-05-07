@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            width: 500px;
+            margin: 0 auto;
+        }
+        input {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label>Search</label>
+        <input type="search" id="search" name="search">
+        <label>Tel</label>
+        <input type="tel" id="tel" name="tel">
+        <label>URL</label>
+        <input type="url" id="url" name="url">
+        <label>Numeric field</label>
+        <!--nastavují se hondoty min a max a další atributy-->
+        <input type="number" name="age" id="age" min="1" max="10" step="2">
+        <label>Slider</label>
+        <!--složitější a je nutné definovat output hodnotu a Javascript atd..-->
+        <input type="range" name="price" id="price" min="50000" max="500000" step="100" value="250000">
+        <label>Date time tad.</label>
+        <!--je více možností toto je pouze jeden příklad-->
+        <input type="month" name="month" id="month">
+
+
+    </form>
+</body>
+<footer>
+    <a href="https://developer.mozilla.org/en-US/docs/Learn/Forms/HTML5_input_types">MDN Docu here</a>
+</footer>
+</html>
