@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Styling basics: Task 1</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #fff;
+        color: #333;
+        font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
+        padding: 1em;
+        margin: 0;
+        width: 500px;
+      }
+      h2 {
+          margin-left: 175px;
+      }
+      button, input, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    }
+    li {
+        list-style: none;
+        width: 500px;
+        display: flex;
+    }
+    li label {
+        width: 150px;
+        text-align:right;
+        margin-right: 25px;
+    }
+    input {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 1rem;
+        color: aqua;
+        width: 200px;
+    }
+    button {
+        border-radius: 25px;
+        background-color: aqua;
+        font-weight: 500;
+        margin-top: 25px;
+        margin-left: 185px;
+    }
+    button:hover {
+        background-color: inherit;
+    }
+
+    </style>
+  </head>
+
+  <body>
+    <form>
+      <h2>Edit your preferences</h2>
+      <ul>
+        <li>
+          <label for="e-mail">Email:</label>
+          <input type="email" id="e-mail" name="e-mail">
+        </li>
+        <li>
+          <label for="website">Website:</label>
+          <input type="url" id="website" name="website">
+        </li>
+        <li>
+          <label for="phone">Phone number:</label>
+          <input type="tel" id="phone" name="phone">
+        </li>
+        <li>
+          <label for="food">Favorite food:</label>
+          <select name="food" id="food">
+            <option>Salad</option>
+            <option>Curry</option>
+            <option>Pizza</option>
+            <option>Fajitas</option>
+          </select>
+        </li>
+        <li>
+          <button>Update preferences</button>
+        </li>
+      </ul>
+    </form>
+    <footer>
+        MDN documentation <a href="https://github.com/mdn/learning-area/blob/master/html/forms/tasks/styling-basics/styling-basics1-download.html">HERE</a>
+    </footer>
+  </body>
+
+</html>
