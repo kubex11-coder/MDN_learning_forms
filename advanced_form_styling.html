@@ -6,12 +6,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+input[type="checkbox"] {
+  position: relative;
+  width: 1em;
+  height: 1em;
+  border: 1px solid gray;
+  /* Adjusts the position of the checkboxes on the text baseline */
+  vertical-align: -2px;
+  /* Set here so that Windows' High-Contrast Mode can override */
+  color: green;
+}
 
+input[type="checkbox"]::before {
+  content: "✔";
+  position: absolute;
+  font-size: 1.2em;
+  right: -1px;
+  top: -0.3em;
+  visibility: hidden;
+}
+
+input[type="checkbox"]:checked::before {
+  /* Use `visibility` instead of `display` to avoid recalculating layout */
+  visibility: visible;
+}
+
+input[type="checkbox"]:disabled {
+  border-color: black;
+  background: #ddd;
+  color: gray;
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper::after {
+  content: "▼";
+  font-size: 1rem;
+  top: 6px;
+  right: 10px;
+  position: absolute;
+}
 
     </style>
 </head>
 <body>
-    
+    <form>
+        <fieldset>
+          <legend>Fruit preferences</legend>
+      
+          <p>
+            <label>
+              <input type="checkbox" name="fruit-1" value="cherry">
+              I like cherry
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" name="fruit-2" value="banana" disabled>
+              I can't like banana
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" name="fruit-3" value="strawberry">
+              I like strawberry
+            </label>
+          </p>
+        </fieldset>
+      </form>
+
+      <div class="select-wrapper"><select id="select" name="select">
+        <option>Banana</option>
+        <option>Cherry</option>
+        <option>Lemon</option>
+      </select></div>
 
     <footer>
         MDN Docu <a href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Advanced_form_styling">HERE</a>
